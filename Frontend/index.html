@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social App Frontend</title>
+</head>
+<body>
+  <div id="root">
+    <h1>Welcome to the Social App!</h1>
+  </div>
+  <script>
+    fetch("http://localhost:8000/")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("root").innerHTML += "<p>" + data.message + "</p>";
+      });
+  </script>
+</body>
+</html>
